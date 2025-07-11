@@ -1,0 +1,32 @@
+---
+import { siteConfig } from "../config";
+import { url } from "../utils/url-utils";
+
+// Simple navigation links
+const navLinks = [
+	{ name: "Home", url: "/" },
+	{ name: "Blog", url: "/" },
+	{ name: "About", url: "/about" },
+];
+---
+
+<header class="mb-12">
+	<!-- Site Title -->
+	<h1 class="text-2xl font-bold mb-6 text-black">
+		<a href={url('/')} class="no-underline hover:opacity-70 transition-opacity">
+			{siteConfig.title}
+		</a>
+	</h1>
+	
+	<!-- Navigation -->
+	<nav class="flex gap-6 items-center">
+		{navLinks.map((link) => (
+			<a 
+				href={url(link.url)}
+				class="text-black hover:text-blue-600 transition-colors no-underline"
+			>
+				{link.name}
+			</a>
+		))}
+	</nav>
+</header>

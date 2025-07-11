@@ -1,0 +1,82 @@
+/* Minimal theme overrides for clean, typography-focused design */
+
+/* Force light mode always */
+* {
+  color-scheme: light !important;
+}
+
+/* Reset some complex styles */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: black !important;
+  background: white !important;
+}
+
+/* Clean typography */
+h1, h2, h3, h4, h5, h6 {
+  color: black !important;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Links */
+a {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #2563eb;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+/* Simple pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .flex .whitespace-nowrap {
+    white-space: normal;
+  }
+}

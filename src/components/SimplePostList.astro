@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPostUrlBySlug } from "@utils/url-utils";
+
+const { page } = Astro.props;
+
+// Format date as "DD MMM, YYYY"
+function formatDate(date: Date): string {
+	const months = [
+		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+	];
+	
+	const day = date.getDate().toString().padStart(2, '0');
+	const month = months[date.getMonth()];
+	const year = date.getFullYear();
+	
+	return `${day} ${month}, ${year}`;
+}
+---
+
+<div class="space-y-4">
+	{page.data.map((entry: CollectionEntry<"posts">) => (
+		<div class="flex gap-4 items-start hover:opacity-70 transition-opacity">
+			<div class="text-gray-500 text-sm font-mono whitespace-nowrap">
+				{formatDate(entry.data.published)}
+			</div>
+			<a 
+				href={getPostUrlBySlug(entry.slug)}
+				class="text-black hover:text-blue-600 transition-colors no-underline"
+			>
+				{entry.data.title}
+			</a>
+		</div>
+	))}
+</div>

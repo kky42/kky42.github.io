@@ -1,9 +1,25 @@
+---
+title: About
+---
+
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
 
-::github{repo="saicaca/fuwari"}
+Hi, I'm KKY, an AI Engineer and Quantitative Trader exploring the intersection of artificial intelligence and financial markets.
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+## What I Do
+
+I work on building intelligent trading systems that leverage deep learning and machine learning techniques to analyze market patterns and make informed trading decisions. My focus areas include:
+
+- **Deep Learning for Finance**: Developing neural networks for market prediction and risk management
+- **Quantitative Trading**: Creating algorithmic trading strategies using statistical and ML approaches
+- **AI Research**: Exploring new architectures and techniques in artificial intelligence
+
+## Background
+
+I have experience working with various ML frameworks and financial data analysis tools. I'm particularly interested in the application of transformer models, time series analysis, and reinforcement learning in trading environments.
+
+## Contact
+
+You can find me on [GitHub](https://github.com/kky42) where I share some of my work and experiments.
+
+Let's meet on Mars! 🚀

@@ -1,0 +1,38 @@
+---
+import Layout from "./Layout.astro";
+import "../styles/minimal.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+	lang?: string;
+	setOGTypeArticle?: boolean;
+}
+
+const { title, description, lang, setOGTypeArticle } = Astro.props;
+---
+
+<Layout title={title} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
+	<div class="min-h-screen bg-white text-black">
+		<div class="max-w-2xl mx-auto px-4 py-8">
+			<slot />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	/* Override some of the complex styles for a clean look */
+	:global(body) {
+		background: white !important;
+		color: black !important;
+	}
+	
+	/* Force light mode */
+	:global(html) {
+		color-scheme: light;
+	}
+	
+	:global(html.dark) {
+		color-scheme: light;
+	}
+</style>

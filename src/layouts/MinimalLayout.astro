@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import SocialFooter from "@components/SocialFooter.astro";
 import "../styles/minimal.css";
 
 interface Props {
@@ -16,6 +17,7 @@ const { title, description, lang, setOGTypeArticle } = Astro.props;
 	<div class="min-h-screen bg-white text-black">
 		<div class="max-w-2xl mx-auto px-4 py-8">
 			<slot />
+			<SocialFooter />
 		</div>
 	</div>
 </Layout>

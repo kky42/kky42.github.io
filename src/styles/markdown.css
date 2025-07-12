@@ -20,15 +20,15 @@
     }
 
     a:not(.no-styling) {
-        @apply relative bg-none link font-medium text-[var(--primary)]
-        underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4;
+        @apply relative bg-none font-medium text-blue-600
+        underline decoration-blue-300 decoration-1 decoration-dashed underline-offset-4;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
     
         &:hover, &:active {
-            @apply decoration-transparent;
-            background: var(--btn-plain-bg-hover);
-            border-bottom: 1px dashed var(--link-hover);
+            @apply decoration-transparent text-blue-800;
+            background: #f3f4f6;
+            border-bottom: 1px dashed #2563eb;
             text-decoration: none;
         }
     }

@@ -69,6 +69,45 @@ a.no-underline {
   border-color: #2563eb;
 }
 
+/* Fix prose text visibility */
+.prose p {
+  color: black !important;
+}
+
+.prose li {
+  color: black !important;
+}
+
+.prose strong {
+  color: black !important;
+}
+
+.prose em {
+  color: black !important;
+}
+
+.prose a {
+  color: #2563eb !important;
+}
+
+.prose code {
+  background-color: #f6f8fa !important;
+  color: #24292f !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 6px !important;
+  font-size: 85% !important;
+  font-weight: normal !important;
+}
+
+/* Hide anchor links completely in minimal theme */
+.prose .anchor {
+  display: none !important;
+}
+
+.prose {
+  color: black !important;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .flex {

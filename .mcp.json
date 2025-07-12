@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "mcp-installer": {
+    "puppeteer": {
       "command": "npx",
       "args": [
-        "@anaisbetts/mcp-installer"
+        "@modelcontextprotocol/server-puppeteer"
       ]
     }
   }

@@ -14,7 +14,7 @@ This is a blog built with Astro. Use pnpm as the package manager.
 - `pnpm type-check` - Run TypeScript type checking
 - `pnpm lint` - Lint and fix code using Biome
 - `pnpm format` - Format code using Biome
-- `pnpm new-post <filename>` - Create a new blog post using the script
+- `pnpm new-post <filename> --folder` - Create a new blog post using the script
 
 ## Architecture Overview
 

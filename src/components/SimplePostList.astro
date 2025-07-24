@@ -31,7 +31,7 @@ function formatDate(date: Date): string {
 
 <div class="space-y-4">
 	{page.data.map((entry: CollectionEntry<"posts">) => (
-		<div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start hover:opacity-70 transition-opacity">
+		<div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-baseline hover:opacity-70 transition-opacity">
 			<div class="text-gray-500 text-sm font-mono whitespace-nowrap sm:min-w-[120px]">
 				{formatDate(entry.data.published)}
 			</div>

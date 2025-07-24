@@ -11,7 +11,7 @@ const navLinks = [
 
 <header class="mb-12">
 	<!-- Site Title -->
-	<h1 class="text-2xl font-bold mb-6 text-black">
+	<h1 class="text-2xl font-bold mb-6 text-black font-mono">
 		<a href={url('/')} class="no-underline hover:opacity-70 transition-opacity">
 			{siteConfig.title}
 		</a>
@@ -22,7 +22,7 @@ const navLinks = [
 		{navLinks.map((link) => (
 			<a 
 				href={url(link.url)}
-				class="text-black hover:text-blue-600 transition-colors no-underline"
+				class="text-black hover:text-blue-600 transition-colors no-underline font-mono"
 			>
 				{link.name}
 			</a>

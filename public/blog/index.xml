@@ -1,12 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on My Personal Blog</title><link>https://kky42.github.io/blog/</link><description>Recent content in Blogs on My Personal Blog</description><generator>Hugo</generator><language>en-US</language><copyright>Copyright © 2025, Your Name.</copyright><lastBuildDate>Wed, 06 Aug 2025 11:34:30 +0800</lastBuildDate><atom:link href="https://kky42.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Test</title><link>https://kky42.github.io/test/</link><pubDate>Wed, 06 Aug 2025 11:34:30 +0800</pubDate><guid>https://kky42.github.io/test/</guid><description>&lt;p>This is a page about »Test«.&lt;/p></description></item><item><title>My First Blog Post</title><link>https://kky42.github.io/my-first-blog-post/</link><pubDate>Wed, 06 Aug 2025 10:00:00 +0800</pubDate><guid>https://kky42.github.io/my-first-blog-post/</guid><description>&lt;h1 id="welcome-to-my-blog">Welcome to My Blog!&lt;/h1>
-&lt;p>This is my very first blog post, and I&amp;rsquo;m excited to share this journey with you.&lt;/p>
-&lt;h2 id="why-i-started-this-blog">Why I Started This Blog&lt;/h2>
-&lt;p>I decided to create this personal space to:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Share my thoughts&lt;/strong> and experiences with the world&lt;/li>
-&lt;li>&lt;strong>Document my learning&lt;/strong> journey in various fields&lt;/li>
-&lt;li>&lt;strong>Connect with others&lt;/strong> who have similar interests&lt;/li>
-&lt;li>&lt;strong>Practice writing&lt;/strong> and improve my communication skills&lt;/li>
-&lt;/ul>
-&lt;h2 id="about-this-setup">About This Setup&lt;/h2>
-&lt;p>This blog is built using:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on My Personal Blog</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on My Personal Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, Your Name.</copyright>
+    <lastBuildDate>Wed, 06 Aug 2025 11:34:30 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/test/</link>
+      <pubDate>Wed, 06 Aug 2025 11:34:30 +0800</pubDate>
+      <guid>http://localhost:1313/test/</guid>
+      <description>&lt;p&gt;This is a page about »Test«.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Blog Post</title>
+      <link>http://localhost:1313/my-first-blog-post/</link>
+      <pubDate>Wed, 06 Aug 2025 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/my-first-blog-post/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog!&lt;/h1&gt;&#xA;&lt;p&gt;This is my very first blog post, and I&amp;rsquo;m excited to share this journey with you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-i-started-this-blog&#34;&gt;Why I Started This Blog&lt;/h2&gt;&#xA;&lt;p&gt;I decided to create this personal space to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share my thoughts&lt;/strong&gt; and experiences with the world&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Document my learning&lt;/strong&gt; journey in various fields&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Connect with others&lt;/strong&gt; who have similar interests&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Practice writing&lt;/strong&gt; and improve my communication skills&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;about-this-setup&#34;&gt;About This Setup&lt;/h2&gt;&#xA;&lt;p&gt;This blog is built using:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

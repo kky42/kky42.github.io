@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://kky42.github.io/blog/</loc><lastmod>2025-08-06T11:34:30+08:00</lastmod></url><url><loc>https://kky42.github.io/</loc><lastmod>2025-08-06T11:34:30+08:00</lastmod></url><url><loc>https://kky42.github.io/test/</loc><lastmod>2025-08-06T11:34:30+08:00</lastmod></url><url><loc>https://kky42.github.io/my-first-blog-post/</loc><lastmod>2025-08-06T10:00:00+08:00</lastmod></url><url><loc>https://kky42.github.io/about/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-08-06T11:34:30+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-08-06T11:34:30+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/test/</loc>
+    <lastmod>2025-08-06T11:34:30+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-first-blog-post/</loc>
+    <lastmod>2025-08-06T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url>
+</urlset>

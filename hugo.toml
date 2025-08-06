@@ -65,3 +65,8 @@ ignoreErrors = ["error-disable-taxonomy"]
   name = "About"
   url = "/about/"
   weight = 10
+
+[[menu.main]]
+  name = "Posts"
+  url = "/"
+  weight = 20

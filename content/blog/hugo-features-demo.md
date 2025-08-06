@@ -5,8 +5,6 @@ draft: false
 description: "A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts."
 ---
 
-# Hugo Features Demo: Images, Code, Math & More
-
 This post demonstrates various features available in Hugo blog posts, including images, code blocks, math formulas, and media embeds.
 
 ## 1. Inserting Local Images
@@ -199,15 +197,13 @@ $$e^{i\pi} + 1 = 0$$
 Hugo makes it easy to link to other posts and pages:
 
 ### Link to Other Posts
-- Check out my [first blog post]({{< relref "my-first-post.md" >}})
-- Read about [Test Post]({{< relref "test.md" >}})
+- Check out the [About page]({{< relref "/about.md" >}})
+- Read about [Hugo documentation](https://gohugo.io/documentation/)
 
 ### Link to Pages
 - Visit the [About page]({{< relref "/about.md" >}})
 
 ### Manual Internal Links
-- [My First Blog Post](/my-first-blog-post/)
-- [Test Post](/test/)
 - [About Page](/about/)
 
 ### Anchor Links (within this post)

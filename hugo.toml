@@ -59,6 +59,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     lineNos = true
     lineNumbersInTable = false
     codeFences = true
+  [markup.goldmark.renderer]
+    unsafe = true
 
 # Navigation menu
 [[menu.main]]

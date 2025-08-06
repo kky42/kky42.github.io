@@ -5,8 +5,8 @@
 
 {{ range (where site.RegularPages "Section" "blog") }}
 <p>
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   <small><time>{{ .Date.Format "02 Jan, 2006" }}</time></small>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </p>
 {{ end }}
 {{ end }}

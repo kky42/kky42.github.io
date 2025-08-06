@@ -1,6 +1,4 @@
 {{ define "main" }}
-<h1>{{ .Site.Title }}</h1>
-
 {{ .Content }}
 
 {{ range (where site.RegularPages "Section" "blog") }}

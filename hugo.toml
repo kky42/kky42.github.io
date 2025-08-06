@@ -62,11 +62,11 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 # Navigation menu
 [[menu.main]]
-  name = "About"
-  url = "/about/"
+  name = "Posts"
+  url = "/"
   weight = 10
 
 [[menu.main]]
-  name = "Posts"
-  url = "/"
+  name = "About"
+  url = "/about/"
   weight = 20

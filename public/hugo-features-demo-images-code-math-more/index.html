@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>Hugo Features Demo: Images, Code, Math &amp; More | KKY Blog</title>
+<meta name="title" content="Hugo Features Demo: Images, Code, Math &amp; More" />
+<meta name="description" content="A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts." />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/hugo-features-demo-images-code-math-more/">
+  <meta property="og:site_name" content="KKY Blog">
+  <meta property="og:title" content="Hugo Features Demo: Images, Code, Math & More">
+  <meta property="og:description" content="A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-08-06T12:15:44+08:00">
+    <meta property="article:modified_time" content="2025-08-06T12:15:44+08:00">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="Hugo Features Demo: Images, Code, Math & More">
+  <meta name="twitter:description" content="A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts.">
+
+
+
+
+  <meta itemprop="name" content="Hugo Features Demo: Images, Code, Math & More">
+  <meta itemprop="description" content="A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts.">
+  <meta itemprop="datePublished" content="2025-08-06T12:15:44+08:00">
+  <meta itemprop="dateModified" content="2025-08-06T12:15:44+08:00">
+  <meta itemprop="wordCount" content="724">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>KKY Blog</h2>
+</a>
+<nav>
+<a href="/">Posts</a>
+
+<a href="/about/">About</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Hugo Features Demo: Images, Code, Math &amp; More</h1>
+<p>
+  <i>
+    <time datetime='2025-08-06'>
+      06 Aug, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <h1 id="hugo-features-demo-images-code-math--more">Hugo Features Demo: Images, Code, Math &amp; More</h1>
+<p>This post demonstrates various features available in Hugo blog posts, including images, code blocks, math formulas, and media embeds.</p>
+<h2 id="1-inserting-local-images">1. Inserting Local Images</h2>
+<p>To add local images to your blog posts:</p>
+<h3 id="step-1-create-the-image-directory">Step 1: Create the image directory</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir -p static/images
+</span></span></code></pre></div><h3 id="step-2-add-your-image-file">Step 2: Add your image file</h3>
+<p>Place your image in <code>/static/images/your-image.jpg</code></p>
+<h3 id="step-3-reference-in-markdown">Step 3: Reference in markdown</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>![<span style="color:#062873;font-weight:bold">Alt text for the image</span>](<span style="color:#4070a0">/images/your-image.jpg</span>)
+</span></span></code></pre></div><p><strong>Example:</strong>
+<img src="/images/hugo-logo.png" alt="Hugo Logo" title="Hugo Static Site Generator"></p>
+<p><em>Note: For this demo to work fully, you&rsquo;d need to add an actual image file to <code>/static/images/hugo-logo.png</code></em></p>
+<h2 id="2-code-blocks">2. Code Blocks</h2>
+<p>Hugo supports syntax highlighting for many programming languages:</p>
+<h3 id="python-example">Python Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">fibonacci</span>(n):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#4070a0">&#34;&#34;&#34;Calculate the nth Fibonacci number.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#007020;font-weight:bold">if</span> n <span style="color:#666">&lt;=</span> <span style="color:#40a070">1</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#007020;font-weight:bold">return</span> n
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#007020;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        <span style="color:#007020;font-weight:bold">return</span> fibonacci(n<span style="color:#666">-</span><span style="color:#40a070">1</span>) <span style="color:#666">+</span> fibonacci(n<span style="color:#666">-</span><span style="color:#40a070">2</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#60a0b0;font-style:italic"># Example usage</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> <span style="color:#007020">range</span>(<span style="color:#40a070">10</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#007020">print</span>(<span style="color:#4070a0">f</span><span style="color:#4070a0">&#34;F(</span><span style="color:#70a0d0">{</span>i<span style="color:#70a0d0">}</span><span style="color:#4070a0">) = </span><span style="color:#70a0d0">{</span>fibonacci(i)<span style="color:#70a0d0">}</span><span style="color:#4070a0">&#34;</span>)
+</span></span></code></pre></div><h3 id="javascript-example">JavaScript Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#60a0b0;font-style:italic">// Modern JavaScript with async/await
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">async</span> <span style="color:#007020;font-weight:bold">function</span> fetchData(url) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#007020;font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#007020;font-weight:bold">const</span> response <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">await</span> fetch(url);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>        <span style="color:#007020;font-weight:bold">const</span> data <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">await</span> response.json();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        <span style="color:#007020;font-weight:bold">return</span> data;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    } <span style="color:#007020;font-weight:bold">catch</span> (error) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        console.error(<span style="color:#4070a0">&#39;Error fetching data:&#39;</span>, error);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#007020;font-weight:bold">throw</span> error;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#60a0b0;font-style:italic">// Usage
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#60a0b0;font-style:italic"></span>fetchData(<span style="color:#4070a0">&#39;/api/users&#39;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    .then(users =&gt; console.log(users))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    .<span style="color:#007020;font-weight:bold">catch</span>(err =&gt; console.error(err));
+</span></span></code></pre></div><h3 id="bashshell-commands">Bash/Shell Commands</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#60a0b0;font-style:italic"># Create a new Hugo site</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>hugo new site my-blog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#007020">cd</span> my-blog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#60a0b0;font-style:italic"># Add a theme</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>git submodule add https://github.com/janraasch/hugo-bearblog.git themes/hugo-bearblog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#60a0b0;font-style:italic"># Create a new post</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>hugo new blog/my-first-post.md
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#60a0b0;font-style:italic"># Start development server</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>hugo server --buildDrafts
+</span></span></code></pre></div><h2 id="3-json-data-examples">3. JSON Data Examples</h2>
+<p>JSON is commonly used for configuration and data exchange:</p>
+<h3 id="configuration-example">Configuration Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;KKY Blog&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#062873;font-weight:bold">&#34;version&#34;</span>: <span style="color:#4070a0">&#34;1.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  <span style="color:#062873;font-weight:bold">&#34;description&#34;</span>: <span style="color:#4070a0">&#34;A personal blog built with Hugo&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  <span style="color:#062873;font-weight:bold">&#34;author&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;KKY&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#062873;font-weight:bold">&#34;email&#34;</span>: <span style="color:#4070a0">&#34;kky@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#062873;font-weight:bold">&#34;website&#34;</span>: <span style="color:#4070a0">&#34;https://kky42.github.io&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#062873;font-weight:bold">&#34;dependencies&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#062873;font-weight:bold">&#34;hugo&#34;</span>: <span style="color:#4070a0">&#34;^0.148.2&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    <span style="color:#062873;font-weight:bold">&#34;theme&#34;</span>: <span style="color:#4070a0">&#34;hugo-bearblog&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>  },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>  <span style="color:#062873;font-weight:bold">&#34;build&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    <span style="color:#062873;font-weight:bold">&#34;commands&#34;</span>: [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>      <span style="color:#4070a0">&#34;hugo --minify&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      <span style="color:#4070a0">&#34;hugo server&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    ]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>  },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>  <span style="color:#062873;font-weight:bold">&#34;seo&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#062873;font-weight:bold">&#34;keywords&#34;</span>: [<span style="color:#4070a0">&#34;blog&#34;</span>, <span style="color:#4070a0">&#34;hugo&#34;</span>, <span style="color:#4070a0">&#34;static-site&#34;</span>],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    <span style="color:#062873;font-weight:bold">&#34;social&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>      <span style="color:#062873;font-weight:bold">&#34;twitter&#34;</span>: <span style="color:#4070a0">&#34;@kky42&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>      <span style="color:#062873;font-weight:bold">&#34;github&#34;</span>: <span style="color:#4070a0">&#34;kky42&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>}
+</span></span></code></pre></div><h3 id="api-response-example">API Response Example</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#062873;font-weight:bold">&#34;status&#34;</span>: <span style="color:#4070a0">&#34;success&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#062873;font-weight:bold">&#34;data&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#062873;font-weight:bold">&#34;posts&#34;</span>: [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>      {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#40a070">1</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        <span style="color:#062873;font-weight:bold">&#34;title&#34;</span>: <span style="color:#4070a0">&#34;Getting Started with Hugo&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        <span style="color:#062873;font-weight:bold">&#34;slug&#34;</span>: <span style="color:#4070a0">&#34;getting-started-hugo&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#062873;font-weight:bold">&#34;published_at&#34;</span>: <span style="color:#4070a0">&#34;2025-08-06T10:00:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#062873;font-weight:bold">&#34;tags&#34;</span>: [<span style="color:#4070a0">&#34;hugo&#34;</span>, <span style="color:#4070a0">&#34;tutorial&#34;</span>, <span style="color:#4070a0">&#34;beginner&#34;</span>],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#062873;font-weight:bold">&#34;excerpt&#34;</span>: <span style="color:#4070a0">&#34;Learn how to create your first Hugo website...&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>      },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>      {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#40a070">2</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        <span style="color:#062873;font-weight:bold">&#34;title&#34;</span>: <span style="color:#4070a0">&#34;Advanced Hugo Features&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        <span style="color:#062873;font-weight:bold">&#34;slug&#34;</span>: <span style="color:#4070a0">&#34;advanced-hugo-features&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        <span style="color:#062873;font-weight:bold">&#34;published_at&#34;</span>: <span style="color:#4070a0">&#34;2025-08-05T15:30:00Z&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>        <span style="color:#062873;font-weight:bold">&#34;tags&#34;</span>: [<span style="color:#4070a0">&#34;hugo&#34;</span>, <span style="color:#4070a0">&#34;advanced&#34;</span>, <span style="color:#4070a0">&#34;features&#34;</span>],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        <span style="color:#062873;font-weight:bold">&#34;excerpt&#34;</span>: <span style="color:#4070a0">&#34;Explore advanced Hugo features like shortcodes...&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>      }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    ]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>  },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>  <span style="color:#062873;font-weight:bold">&#34;meta&#34;</span>: {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    <span style="color:#062873;font-weight:bold">&#34;total&#34;</span>: <span style="color:#40a070">2</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#062873;font-weight:bold">&#34;page&#34;</span>: <span style="color:#40a070">1</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    <span style="color:#062873;font-weight:bold">&#34;per_page&#34;</span>: <span style="color:#40a070">10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>}
+</span></span></code></pre></div><h2 id="4-math-formulas">4. Math Formulas</h2>
+<p><strong>Note:</strong> Math rendering requires additional setup with MathJax or KaTeX. Here&rsquo;s how the syntax would look:</p>
+<h3 id="inline-math">Inline Math</h3>
+<p>The quadratic formula is \(x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\).</p>
+<h3 id="block-math-equations">Block Math Equations</h3>
+<p>The Pythagorean theorem:
+$$a^2 + b^2 = c^2$$</p>
+<p>Machine Learning Loss Function:
+$$L(\theta) = \frac{1}{m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2$$</p>
+<p>Euler&rsquo;s Identity:
+$$e^{i\pi} + 1 = 0$$</p>
+<p><em>To enable math rendering, add MathJax or KaTeX to your Hugo theme&rsquo;s head section.</em></p>
+<h2 id="5-internal-references">5. Internal References</h2>
+<p>Hugo makes it easy to link to other posts and pages:</p>
+<h3 id="link-to-other-posts">Link to Other Posts</h3>
+<ul>
+<li>Check out my <a href="/my-first-blog-post/">first blog post</a></li>
+<li>Read about <a href="/test/">Test Post</a></li>
+</ul>
+<h3 id="link-to-pages">Link to Pages</h3>
+<ul>
+<li>Visit the <a href="/about/">About page</a></li>
+</ul>
+<h3 id="manual-internal-links">Manual Internal Links</h3>
+<ul>
+<li><a href="/my-first-blog-post/">My First Blog Post</a></li>
+<li><a href="/test/">Test Post</a></li>
+<li><a href="/about/">About Page</a></li>
+</ul>
+<h3 id="anchor-links-within-this-post">Anchor Links (within this post)</h3>
+<ul>
+<li>Jump to <a href="#2-code-blocks">Code Blocks</a></li>
+<li>Go to <a href="#4-math-formulas">Math Formulas</a></li>
+</ul>
+<h2 id="6-embedding-youtube-videos">6. Embedding YouTube Videos</h2>
+<h3 id="method-1-hugo-shortcode">Method 1: Hugo Shortcode</h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/karpathy-video-id?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h3 id="method-2-html-embed">Method 2: HTML Embed</h3>
+<p>Here&rsquo;s how to embed a video from Andrej Karpathy&rsquo;s channel (replace VIDEO_ID):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">width</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;560&#34;</span> <span style="color:#4070a0">height</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;315&#34;</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://www.youtube.com/embed/VMj-3S1tku0&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>        <span style="color:#4070a0">title</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;YouTube video player&#34;</span> <span style="color:#4070a0">frameborder</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        <span style="color:#4070a0">allow</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>        <span style="color:#4070a0">allowfullscreen</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;
+</span></span></code></pre></div><p><strong>Example Embed:</strong></p>
+<!-- raw HTML omitted -->
+<h3 id="method-3-responsive-embed">Method 3: Responsive Embed</h3>
+<p>For responsive design, wrap in a container:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">style</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  &lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://www.youtube.com/embed/VMj-3S1tku0&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>          <span style="color:#4070a0">style</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>          <span style="color:#4070a0">frameborder</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0&#34;</span> <span style="color:#4070a0">allowfullscreen</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  &lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>&lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<p>This post covered:</p>
+<ol>
+<li><strong>Local Images</strong>: Store in <code>/static/images/</code> and reference with <code>/images/filename</code></li>
+<li><strong>Code Blocks</strong>: Use triple backticks with language specification</li>
+<li><strong>JSON</strong>: Great for configuration examples and API responses</li>
+<li><strong>Math Formulas</strong>: Requires MathJax/KaTeX setup for rendering</li>
+<li><strong>Internal Links</strong>: Use <code>relref</code> shortcodes or manual paths</li>
+<li><strong>YouTube Embeds</strong>: Multiple methods from shortcodes to responsive iframes</li>
+</ol>
+<p>These features make Hugo a powerful platform for technical blogging and documentation!</p>
+<hr>
+<p><em>Want to see the source of this post? Check out the markdown file in the repository.</em></p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

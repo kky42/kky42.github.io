@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Site.Title }}</h1>
+
+{{ .Content }}
+
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ if not site.Params.mainSections }}
+{{ $pages = where site.RegularPages "Section" "blog" }}
+{{ end }}
+
+{{ if $pages }}
+{{ range $pages }}
+<p>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <small><time>{{ .Date.Format "02 Jan, 2006" }}</time></small>
+</p>
+{{ end }}
+{{ else }}
+<p>No posts yet</p>
+{{ end }}
+{{ end }}

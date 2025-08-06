@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: https://kky42.github.io/sitemap.xml
+Sitemap: http://localhost:54441/sitemap.xml

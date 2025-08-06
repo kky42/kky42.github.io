@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kky42.github.io/blog/</loc>
+    <loc>http://localhost:54441/blog/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>https://kky42.github.io/hugo-features-demo-images-code-math-more/</loc>
+    <loc>http://localhost:54441/hugo-features-demo-images-code-math-more/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>https://kky42.github.io/</loc>
+    <loc>http://localhost:54441/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>https://kky42.github.io/about/</loc>
+    <loc>http://localhost:54441/about/</loc>
   </url>
 </urlset>

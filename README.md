@@ -4,58 +4,23 @@ A minimalist personal blog built with [Hugo](https://gohugo.io) and the [hugo-be
 
 🌐 **Live site**: https://kky42.github.io
 
-## Adding New Blog Posts
+## Quick Start
 
-### Method 1: Using Hugo CLI (Recommended)
+### 1. Add New Post
+```bash
+hugo new blog/your-post-title.md
+```
 
-1. Create a new blog post:
-   ```bash
-   hugo new blog/your-post-title.md
-   ```
+### 2. Remove Post
+```bash
+rm content/blog/your-post-title.md
+```
 
-2. Edit the generated file in `content/blog/your-post-title.md`:
-   ```markdown
-   ---
-   title: "Your Post Title"
-   date: 2025-08-06T10:00:00+08:00
-   draft: false
-   ---
-
-   # Your Post Title
-
-   Write your content here...
-   ```
-
-### Method 2: Manual Creation
-
-1. Create a new file in `content/blog/` directory
-2. Add the front matter (metadata) at the top:
-   ```markdown
-   ---
-   title: "Your Post Title"
-   date: 2025-08-06T10:00:00+08:00
-   draft: false
-   ---
-   ```
-3. Write your content below the `---`
-
-## Preview Website Locally
-
-1. **Start the development server**:
-   ```bash
-   hugo server
-   ```
-   
-2. **Open your browser** and visit: http://localhost:1313
-
-3. **Live reload**: The site will automatically refresh when you make changes to your content or configuration.
-
-4. **Include draft posts** (optional):
-   ```bash
-   hugo server --buildDrafts
-   ```
-
-5. **Stop the server**: Press `Ctrl+C` in the terminal
+### 3. Preview Locally
+```bash
+hugo server
+```
+Open: http://localhost:1313
 
 ## Publishing Changes
 

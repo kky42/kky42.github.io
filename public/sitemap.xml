@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:61752/blog/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hugo-features-demo-images-code-math-more/</loc>
+    <loc>http://localhost:61752/hugo-features-demo-images-code-math-more/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:61752/</loc>
     <lastmod>2025-08-06T12:15:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:61752/about/</loc>
   </url>
 </urlset>

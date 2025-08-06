@@ -1,6 +1,6 @@
 ---
 title: "My First Blog Post"
-date: 2025-08-06T10:00:00-07:00
+date: 2025-08-06T10:00:00+08:00
 draft: false
 ---
 

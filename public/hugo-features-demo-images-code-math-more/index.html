@@ -38,7 +38,7 @@
   <meta itemprop="description" content="A comprehensive guide showing how to use images, code blocks, JSON, math formulas, internal links, and YouTube embeds in Hugo blog posts.">
   <meta itemprop="datePublished" content="2025-08-06T12:15:44+08:00">
   <meta itemprop="dateModified" content="2025-08-06T12:15:44+08:00">
-  <meta itemprop="wordCount" content="724">
+  <meta itemprop="wordCount" content="769">
   <meta itemprop="image" content="http://localhost:1313/images/share.png">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -240,9 +240,24 @@
 <p>Place your image in <code>/static/images/your-image.jpg</code></p>
 <h3 id="step-3-reference-in-markdown">Step 3: Reference in markdown</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>![<span style="color:#062873;font-weight:bold">Alt text for the image</span>](<span style="color:#4070a0">/images/your-image.jpg</span>)
-</span></span></code></pre></div><p><strong>Example:</strong>
-<img src="/images/hugo-logo.png" alt="Hugo Logo" title="Hugo Static Site Generator"></p>
-<p><em>Note: For this demo to work fully, you&rsquo;d need to add an actual image file to <code>/static/images/hugo-logo.png</code></em></p>
+</span></span></code></pre></div><p><strong>Example with actual image:</strong>
+<img src="/images/openai-logo.png" alt="OpenAI Logo" title="OpenAI Logo"></p>
+<p>This image was downloaded from OpenAI&rsquo;s website and placed in <code>/static/images/openai-logo.png</code>.</p>
+<h3 id="image-styling-options">Image Styling Options</h3>
+<p>You can also control image size and alignment with HTML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#60a0b0;font-style:italic">&lt;!-- Centered image --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;<span style="color:#062873;font-weight:bold">div</span> <span style="color:#4070a0">style</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;text-align: center;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  &lt;<span style="color:#062873;font-weight:bold">img</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;/images/openai-logo.png&#34;</span> <span style="color:#4070a0">alt</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;OpenAI Logo&#34;</span> <span style="color:#4070a0">width</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;64&#34;</span> <span style="color:#4070a0">height</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;64&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>&lt;/<span style="color:#062873;font-weight:bold">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#60a0b0;font-style:italic">&lt;!-- Image with caption --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>&lt;<span style="color:#062873;font-weight:bold">figure</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  &lt;<span style="color:#062873;font-weight:bold">img</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;/images/openai-logo.png&#34;</span> <span style="color:#4070a0">alt</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;OpenAI Logo&#34;</span> <span style="color:#4070a0">width</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;32&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  &lt;<span style="color:#062873;font-weight:bold">figcaption</span>&gt;OpenAI&#39;s logo favicon&lt;/<span style="color:#062873;font-weight:bold">figcaption</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>&lt;/<span style="color:#062873;font-weight:bold">figure</span>&gt;
+</span></span></code></pre></div><p><strong>Rendered examples:</strong></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="2-code-blocks">2. Code Blocks</h2>
 <p>Hugo supports syntax highlighting for many programming languages:</p>
 <h3 id="python-example">Python Example</h3>

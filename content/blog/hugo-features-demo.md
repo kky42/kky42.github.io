@@ -26,10 +26,38 @@ Place your image in `/static/images/your-image.jpg`
 ![Alt text for the image](/images/your-image.jpg)
 ```
 
-**Example:**
-![Hugo Logo](/images/hugo-logo.png "Hugo Static Site Generator")
+**Example with actual image:**
+![OpenAI Logo](/images/openai-logo.png "OpenAI Logo")
 
-*Note: For this demo to work fully, you'd need to add an actual image file to `/static/images/hugo-logo.png`*
+This image was downloaded from OpenAI's website and placed in `/static/images/openai-logo.png`.
+
+### Image Styling Options
+
+You can also control image size and alignment with HTML:
+
+```html
+<!-- Centered image -->
+<div style="text-align: center;">
+  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="64" height="64">
+</div>
+
+<!-- Image with caption -->
+<figure>
+  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="32">
+  <figcaption>OpenAI's logo favicon</figcaption>
+</figure>
+```
+
+**Rendered examples:**
+
+<div style="text-align: center;">
+  <img src="/images/openai-logo.png" alt="OpenAI Logo Centered" width="64" height="64">
+</div>
+
+<figure>
+  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="32">
+  <figcaption><em>OpenAI's logo favicon (32px)</em></figcaption>
+</figure>
 
 ## 2. Code Blocks
 

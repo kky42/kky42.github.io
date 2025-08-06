@@ -21,15 +21,10 @@ mkdir -p static/images
 ### Step 2: Add your image file
 Place your image in `/static/images/your-image.jpg`
 
-### Step 3: Reference in markdown
-```markdown
-![Alt text for the image](/images/your-image.jpg)
-```
-
 **Example with actual image:**
-![OpenAI Logo](/images/openai-logo.png "OpenAI Logo")
+![Sample Image](/images/sample-image.png "Sample Image from Lorem Picsum")
 
-This image was downloaded from OpenAI's website and placed in `/static/images/openai-logo.png`.
+This image was downloaded from Lorem Picsum and placed in `/static/images/sample-image.png`.
 
 ### Image Styling Options
 
@@ -38,25 +33,25 @@ You can also control image size and alignment with HTML:
 ```html
 <!-- Centered image -->
 <div style="text-align: center;">
-  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="64" height="64">
+  <img src="/images/sample-image.png" alt="Sample Image" width="100" height="100">
 </div>
 
 <!-- Image with caption -->
 <figure>
-  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="32">
-  <figcaption>OpenAI's logo favicon</figcaption>
+  <img src="/images/sample-image.png" alt="Sample Image" width="75">
+  <figcaption>Sample image from Lorem Picsum</figcaption>
 </figure>
 ```
 
 **Rendered examples:**
 
 <div style="text-align: center;">
-  <img src="/images/openai-logo.png" alt="OpenAI Logo Centered" width="64" height="64">
+  <img src="/images/sample-image.png" alt="Sample Image Centered" width="100" height="100">
 </div>
 
 <figure>
-  <img src="/images/openai-logo.png" alt="OpenAI Logo" width="32">
-  <figcaption><em>OpenAI's logo favicon (32px)</em></figcaption>
+  <img src="/images/sample-image.png" alt="Sample Image" width="75">
+  <figcaption><em>Sample image from Lorem Picsum (75px)</em></figcaption>
 </figure>
 
 ## 2. Code Blocks
@@ -185,17 +180,17 @@ JSON is commonly used for configuration and data exchange:
 **Note:** Math rendering requires additional setup with MathJax or KaTeX. Here's how the syntax would look:
 
 ### Inline Math
-The quadratic formula is \\(x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}\\).
+The quadratic formula is \\(x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\\).
 
 ### Block Math Equations
 The Pythagorean theorem:
 $$a^2 + b^2 = c^2$$
 
 Machine Learning Loss Function:
-$$L(\\theta) = \\frac{1}{m} \\sum_{i=1}^{m} \\left( h_\\theta(x^{(i)}) - y^{(i)} \\right)^2$$
+$$L(\theta) = \frac{1}{m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2$$
 
 Euler's Identity:
-$$e^{i\\pi} + 1 = 0$$
+$$e^{i\pi} + 1 = 0$$
 
 *To enable math rendering, add MathJax or KaTeX to your Hugo theme's head section.*
 
@@ -222,13 +217,13 @@ Hugo makes it easy to link to other posts and pages:
 ## 6. Embedding YouTube Videos
 
 ### Method 1: Hugo Shortcode
-{{< youtube "karpathy-video-id" >}}
+{{< youtube "XDYilxy1dn8" >}}
 
 ### Method 2: HTML Embed
-Here's how to embed a video from Andrej Karpathy's channel (replace VIDEO_ID):
+Here's how to embed the specific YouTube video you requested:
 
 ```html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VMj-3S1tku0" 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XDYilxy1dn8" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
@@ -236,8 +231,8 @@ Here's how to embed a video from Andrej Karpathy's channel (replace VIDEO_ID):
 ```
 
 **Example Embed:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VMj-3S1tku0" 
-        title="The spelled-out intro to neural networks and backpropagation" frameborder="0" 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XDYilxy1dn8" 
+        title="YouTube Video Embed Example" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
 </iframe>
@@ -247,12 +242,20 @@ For responsive design, wrap in a container:
 
 ```html
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/VMj-3S1tku0" 
+  <iframe src="https://www.youtube.com/embed/XDYilxy1dn8" 
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0" allowfullscreen>
   </iframe>
 </div>
 ```
+
+**Responsive Example:**
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/XDYilxy1dn8" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Summary
 

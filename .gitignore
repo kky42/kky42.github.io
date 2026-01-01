@@ -1,3 +1,5 @@
+.DS_Store
+.trash/
 .venv/
 .uv-cache/
 __pycache__/

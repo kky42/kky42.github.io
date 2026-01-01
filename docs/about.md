@@ -1,0 +1,7 @@
+---
+hide:
+  - navigation
+---
+
+# About Me
+

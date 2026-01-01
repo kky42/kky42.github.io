@@ -1,4 +1,30 @@
-site_name: KKY's backyard
+site_name: KKY
 site_url: https://kky42.github.io/
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.expand
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+      post_date_format: medium
+      archive_name: Archive
+      categories_name: Categories
+
+markdown_extensions:
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+  - Kaggle:
+    - kaggle/index.md
+    - A: kaggle/project-a.md
+    - B: kaggle/project-b.md
+  - About: about.md

@@ -145,7 +145,7 @@ shell-integration-features = no-cursor
 
 到此配置结束，启动你的ghostty看看效果吧！
 
-![](assets/ultimate-mac-terminal-setup/final-look-2.png){ width="50%" }
+![](assets/ultimate-mac-terminal-setup/final-look.png){ width="50%" }
 ## Tips
 
 - **命令部分补全**，使用 `->` 可以完整接受命令补全结果，使用`option + ->`可移动光标进行部分补全

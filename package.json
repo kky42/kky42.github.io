@@ -1,0 +1,22 @@
+{
+  "name": "kky42-github-io",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal blog for KKY",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "clean": "rm -rf _site"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.28",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
+  }
+}

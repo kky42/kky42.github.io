@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if title and title != site.title %}
+        {{ title }} | {{ site.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+    <meta name="description" content="{{ description or summary or site.description }}" />
+    <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Feed" href="{{ "/feed.xml" | absoluteUrl(site.url) }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{{ title or site.title }}" />
+    <meta property="og:description" content="{{ description or summary or site.description }}" />
+    <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
+    <meta property="og:image" content="{{ "/images/og-default.svg" | absoluteUrl(site.url) }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title or site.title }}" />
+    <meta name="twitter:description" content="{{ description or summary or site.description }}" />
+    <meta name="twitter:image" content="{{ "/images/og-default.svg" | absoluteUrl(site.url) }}" />
+    <link rel="stylesheet" href="/assets/vendor/katex.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/highlight.css" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-width site-header-inner">
+          <a class="site-mark" href="/">{{ site.name }}</a>
+          <nav class="site-nav" aria-label="Primary">
+            {% for item in site.nav %}
+              <a href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-width site-main">
+        {{ content | safe }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-width site-footer-inner">
+          <p>© {% year %} {{ site.name }}</p>
+          <p>Built for clarity, speed, and durable writing.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="/assets/vendor/katex.min.js"></script>
+    <script defer src="/assets/vendor/katex-auto-render.min.js"></script>
+    <script defer src="/assets/js/math.js"></script>
+    {% if mermaid %}
+      <script type="module" src="/assets/js/mermaid.js"></script>
+    {% endif %}
+  </body>
+</html>

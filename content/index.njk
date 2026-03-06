@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: KKY
+description: Notes, essays, and technical writing from KKY.
+permalink: /
+---
+{% from "components/post-card.njk" import postCard %}
+{% set latestPost = collections.posts[0] %}
+
+<section class="hero">
+  <p class="eyebrow">Personal writing</p>
+  <h1>Clear writing on engineering, research, and practical AI work.</h1>
+  <p class="lede">
+    A lightweight home for essays, notes, and experiments. Built to be readable,
+    fast, and easy to maintain.
+  </p>
+  <div class="hero-actions">
+    <a class="button button-primary" href="/posts/">Browse posts</a>
+    <a class="button button-secondary" href="/about/">About</a>
+  </div>
+</section>
+
+{% if latestPost %}
+<section class="section">
+  <div class="section-header">
+    <p class="eyebrow">Latest</p>
+    <h2>Recent writing</h2>
+  </div>
+  <div class="post-grid">
+    {% for post in collections.posts %}
+      {% if loop.index0 < 3 %}
+        {{ postCard(post, loop.first) }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

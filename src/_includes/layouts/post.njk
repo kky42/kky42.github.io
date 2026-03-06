@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<article class="post-shell">
+  <a class="back-link" href="/posts/">Back to posts</a>
+
+  <header class="post-header">
+    <p class="eyebrow">Post</p>
+    <h1>{{ title }}</h1>
+    {% if summary %}
+      <p class="post-summary">{{ summary }}</p>
+    {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+      {% if tags and tags.length %}
+        <ul class="tag-list" aria-label="Tags">
+          {% for tag in tags %}
+            {% if tag != "post" %}
+              <li>{{ tag }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

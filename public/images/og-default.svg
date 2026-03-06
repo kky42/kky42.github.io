@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F6F5F1"/>
+  <rect x="48" y="48" width="1104" height="534" rx="36" fill="white" stroke="#E5E1D8"/>
+  <circle cx="118" cy="118" r="10" fill="#111111"/>
+  <text x="96" y="220" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700">
+    KKY
+  </text>
+  <text x="96" y="300" fill="#444444" font-family="Arial, Helvetica, sans-serif" font-size="34">
+    Notes, essays, and technical writing.
+  </text>
+  <text x="96" y="512" fill="#666666" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    Built for clarity, speed, and durable writing.
+  </text>
+</svg>

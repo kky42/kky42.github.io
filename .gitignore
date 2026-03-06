@@ -1,10 +1,10 @@
 .DS_Store
 .trash/
-.venv/
-.uv-cache/
-__pycache__/
-*.pyc
-.pytest_cache/
-
-site/
+.tools/
+.cache/
+node_modules/
+_site/
+.obsidian/
+_legacy/
+influencerq-web-source.zip
 .obsidian/

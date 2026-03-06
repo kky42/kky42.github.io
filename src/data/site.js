@@ -2,7 +2,7 @@ module.exports = {
   name: "KKY",
   title: "KKY",
   description: "Notes, essays, and technical writing from KKY.",
-  url: "https://kky42.github.io",
+  url: "https://www.kky42.com",
   author: "KKY",
   nav: [
     { href: "/", label: "Home" },

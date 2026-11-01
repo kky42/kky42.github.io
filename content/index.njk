@@ -1,37 +1,58 @@
 ---
 layout: base.njk
 title: KKY
-description: Notes, essays, and technical writing from KKY.
+description: Notes on agent tooling, research, and the things I build.
 permalink: /
 ---
-{% from "components/post-card.njk" import postCard %}
-{% set latestPost = collections.posts[0] %}
+{% set recentPosts = collections.homePosts %}
 
-<section class="hero">
-  <p class="eyebrow">Personal writing</p>
-  <h1>Clear writing on engineering, research, and practical AI work.</h1>
-  <p class="lede">
-    A lightweight home for essays, notes, and experiments. Built to be readable,
-    fast, and easy to maintain.
+<div class="home-intro">
+  <p>
+    Hi — I build <em>agent tooling</em>: MCP servers, multi-agent workflows, and
+    the small pieces of plumbing that make coding agents usable day to day.
   </p>
-  <div class="hero-actions">
-    <a class="button button-primary" href="/posts/">Browse posts</a>
-    <a class="button button-secondary" href="/about/">About</a>
-  </div>
-</section>
+  <p>
+    I also compete on Kaggle, and I like quantitative problems where the data
+    argues back.
+  </p>
+  <p>
+    This is where I write it down: what I built, what broke, and what actually
+    moved the numbers.
+  </p>
+</div>
 
-{% if latestPost %}
-<section class="section">
-  <div class="section-header">
-    <p class="eyebrow">Latest</p>
-    <h2>Recent writing</h2>
-  </div>
-  <div class="post-grid">
-    {% for post in collections.posts %}
-      {% if loop.index0 < 3 %}
-        {{ postCard(post, loop.first) }}
-      {% endif %}
+{% if projects and projects.length %}
+<section class="section-block" id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    {% for item in projects %}
+      <div class="project-item">
+        <h3>
+          <a href="{{ item.url }}">{{ item.title }}</a>{% if item.tag %}<span class="project-tag">{{ item.tag }}</span>{% endif %}
+        </h3>
+        <p>
+          {{ item.description }}
+          {% if item.meta %}<span class="project-meta">{{ item.meta }}</span>{% endif %}
+        </p>
+      </div>
     {% endfor %}
   </div>
 </section>
 {% endif %}
+
+<section class="section-block" id="writing">
+  <h2>Writing</h2>
+  {% if recentPosts.length %}
+    <ul class="writing-list">
+      {% for post in recentPosts %}
+        <li>
+          <span class="writing-date">{{ post.date | shortDate }}</span>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p><a href="/posts/">All posts →</a></p>
+  {% else %}
+    <p class="writing-empty">No posts yet.</p>
+  {% endif %}
+</section>

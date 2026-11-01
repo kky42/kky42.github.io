@@ -18,37 +18,62 @@
     <meta property="og:title" content="{{ title or site.title }}" />
     <meta property="og:description" content="{{ description or summary or site.description }}" />
     <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
-    <meta property="og:image" content="{{ "/images/og-default.svg" | absoluteUrl(site.url) }}" />
+    <meta property="og:image" content="{{ "/images/og-default.png" | absoluteUrl(site.url) }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ title or site.title }}" />
     <meta name="twitter:description" content="{{ description or summary or site.description }}" />
-    <meta name="twitter:image" content="{{ "/images/og-default.svg" | absoluteUrl(site.url) }}" />
+    <meta name="twitter:image" content="{{ "/images/og-default.png" | absoluteUrl(site.url) }}" />
     <link rel="stylesheet" href="/assets/vendor/katex.min.css" />
     <link rel="stylesheet" href="/assets/vendor/highlight.css" />
     <link rel="stylesheet" href="/assets/css/site.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <div class="site-width site-header-inner">
-          <a class="site-mark" href="/">{{ site.name }}</a>
-          <nav class="site-nav" aria-label="Primary">
+    <div class="site-container">
+      <header class="site-sidebar">
+        <p class="site-name"><a href="/">{{ site.name }}</a></p>
+
+        <nav aria-label="Primary">
+          <ul class="sidebar-list">
             {% for item in site.nav %}
-              <a href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              <li>
+                <a href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              </li>
             {% endfor %}
-          </nav>
-        </div>
+          </ul>
+        </nav>
+
+        {% if site.elsewhere %}
+          <p class="sidebar-label">Elsewhere</p>
+          <ul class="sidebar-list">
+            {% for item in site.elsewhere %}
+              <li><a href="{{ item.href }}" rel="me">{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if site.subscribe %}
+          <p class="sidebar-label">Subscribe</p>
+          <ul class="sidebar-list">
+            {% for item in site.subscribe %}
+              <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if site.email %}
+          <p class="sidebar-label">Contact</p>
+          <ul class="sidebar-list">
+            <li><a href="mailto:{{ site.email }}">Email me</a></li>
+          </ul>
+        {% endif %}
       </header>
 
-      <main class="site-width site-main">
+      <main class="site-main">
         {{ content | safe }}
       </main>
 
       <footer class="site-footer">
-        <div class="site-width site-footer-inner">
-          <p>© {% year %} {{ site.name }}</p>
-          <p>Built for clarity, speed, and durable writing.</p>
-        </div>
+        <p>© {% year %} {{ site.name }}</p>
       </footer>
     </div>
 

@@ -4,21 +4,24 @@ title: Posts
 description: A chronological archive of notes, essays, and technical writing.
 permalink: /posts/
 ---
-{% from "components/post-card.njk" import postCard %}
 
-<section class="section">
-  <div class="section-header">
-    <p class="eyebrow">Archive</p>
-    <h1>Posts</h1>
-    <p class="section-copy">
-      Short essays, technical notes, and durable writeups. This archive starts
-      small on purpose.
-    </p>
-  </div>
+<section class="section-block" id="writing">
+  <h1 class="page-title">Posts</h1>
+  <p class="page-copy">
+    Short essays, technical notes, and durable writeups. This archive starts
+    small on purpose.
+  </p>
 
-  <div class="post-grid">
-    {% for post in collections.posts %}
-      {{ postCard(post, loop.first and collections.posts.length == 1) }}
-    {% endfor %}
-  </div>
+  {% if collections.posts.length %}
+    <ul class="writing-list">
+      {% for post in collections.posts %}
+        <li>
+          <span class="writing-date">{{ post.date | shortDate }}</span>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="writing-empty">No posts yet.</p>
+  {% endif %}
 </section>

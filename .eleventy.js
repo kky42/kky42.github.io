@@ -47,6 +47,17 @@ module.exports = function (eleventyConfig) {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "UTC",
+    }).format(date);
+  });
+
+  eleventyConfig.addFilter("shortDate", (value) => {
+    const date = new Date(value);
+    return new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC",
     }).format(date);
   });
 
@@ -63,6 +74,16 @@ module.exports = function (eleventyConfig) {
       .getFilteredByTag("post")
       .filter(isPublishable)
       .sort((left, right) => right.date - left.date);
+  });
+
+  // The home page shows recent writing, but hides the stack's own demo post.
+  eleventyConfig.addCollection("homePosts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("post")
+      .filter(isPublishable)
+      .filter((item) => item.page.fileSlug !== "markdown-sandbox")
+      .sort((left, right) => right.date - left.date)
+      .slice(0, 8);
   });
 
   eleventyConfig.addCollection("sitemap", (collectionApi) => {
@@ -101,11 +122,20 @@ module.exports = function (eleventyConfig) {
       permalink: markdownItAnchor.permalink.headerLink(),
     });
 
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  // Wrap tables so a wide one scrolls instead of stretching the page.
+  const defaultTableOpen =
+    markdownLibrary.renderer.rules.table_open ||
+    ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
+  const defaultTableClose =
+    markdownLibrary.renderer.rules.table_close ||
+    ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
 
-  eleventyConfig.setServerOptions({
-    showAllHosts: true,
-  });
+  markdownLibrary.renderer.rules.table_open = (tokens, idx, options, env, self) =>
+    `<div class="table-wrap">${defaultTableOpen(tokens, idx, options, env, self)}`;
+  markdownLibrary.renderer.rules.table_close = (tokens, idx, options, env, self) =>
+    `${defaultTableClose(tokens, idx, options, env, self)}</div>`;
+
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   return {
     dir: {

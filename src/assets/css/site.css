@@ -98,6 +98,27 @@ h4 {
 
 .site-name a {
   color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex: none;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+@media (max-width: 860px) {
+  .site-avatar {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 
 .site-name a:hover {

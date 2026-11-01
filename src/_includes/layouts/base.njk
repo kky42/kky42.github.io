@@ -23,6 +23,8 @@
     <meta name="twitter:title" content="{{ title or site.title }}" />
     <meta name="twitter:description" content="{{ description or summary or site.description }}" />
     <meta name="twitter:image" content="{{ "/images/og-default.png" | absoluteUrl(site.url) }}" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.jpg" />
     <link rel="stylesheet" href="/assets/vendor/katex.min.css" />
     <link rel="stylesheet" href="/assets/vendor/highlight.css" />
     <link rel="stylesheet" href="/assets/css/site.css" />
@@ -30,7 +32,12 @@
   <body>
     <div class="site-container">
       <header class="site-sidebar">
-        <p class="site-name"><a href="/">{{ site.name }}</a></p>
+        <p class="site-name">
+          <a href="/">
+            <img class="site-avatar" src="/images/avatar.jpg" alt="{{ site.name }}" width="56" height="56" />
+            <span>{{ site.name }}</span>
+          </a>
+        </p>
 
         <nav aria-label="Primary">
           <ul class="sidebar-list">

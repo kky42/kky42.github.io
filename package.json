@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development npx @11ty/eleventy --serve",
     "build": "NODE_ENV=production npx @11ty/eleventy",
+    "check": "node scripts/check.mjs",
     "clean": "rm -rf _site"
   },
   "dependencies": {

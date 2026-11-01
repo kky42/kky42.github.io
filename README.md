@@ -1,7 +1,7 @@
 # kky42.github.io
 
 This repository contains a lightweight personal blog built with Eleventy and
-deployed to GitHub Pages.
+deployed to Cloudflare Pages.
 
 ## About This Site
 
@@ -140,19 +140,16 @@ So:
 
 ## Deployment
 
-GitHub Pages is the current deployment target.
+Cloudflare Pages is the deployment target: a push to `main` triggers the
+Cloudflare build (`npm run build`, output `_site`) and publishes to
+`www.kky42.com`.
 
-The workflow is defined in:
+`.github/workflows/ci.yml` is CI only. It builds the site and runs
+`npm run check` (required files, no personal data in the output, page titles,
+internal links) on every push and pull request. It does not deploy.
 
-- `.github/workflows/pages.yml`
-
-Expected setup on GitHub:
-
-- GitHub Pages source set to `GitHub Actions`
-
-Current deployment behavior:
-
-- push to `main` -> GitHub Actions builds and deploys the site
+A failed Cloudflare deployment sends an email alert; the previously deployed
+site stays live until a new build succeeds.
 
 ## Markdown Features
 
@@ -168,10 +165,14 @@ For Mermaid:
 
 - add `mermaid: true` in frontmatter when the post contains Mermaid code fences
 
+For math:
+
+- add `math: true` in frontmatter to load KaTeX on that page; pages without it
+  do not download KaTeX at all
+
 ## Notes For Future Maintenance
 
 - keep the site lightweight
 - prefer static generation over heavy app frameworks
 - avoid introducing complexity unless there is a clear need
 - keep SEO basics working: canonical URLs, sitemap, RSS, robots, metadata
-- Cloudflare deployment can be added later without changing the content model

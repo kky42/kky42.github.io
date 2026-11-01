@@ -7,7 +7,6 @@ module.exports = {
   nav: [
     { href: "/", label: "Home" },
     { href: "/#projects", label: "Projects" },
-    { href: "/#writing", label: "Writing" },
     { href: "/posts/", label: "Archive" },
     { href: "/about/", label: "About" },
   ],

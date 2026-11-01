@@ -8,6 +8,7 @@ tags:
   - writing
 draft: true
 mermaid: false
+math: false
 ---
 
 Start writing here.

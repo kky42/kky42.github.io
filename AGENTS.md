@@ -11,20 +11,20 @@ Current goals:
 - keep the stack simple
 - optimize for readable long-form writing
 - support Markdown-first publishing
-- deploy to GitHub Pages first
-- keep room for Cloudflare deployment later
+- deploy with Cloudflare Pages
 
 ## Current Stack
 
 - Eleventy static site
-- GitHub Pages deployment via GitHub Actions
+- Cloudflare Pages deployment on push to `main`
 - Markdown content under `content/`
 - site templates and assets under `src/`
 
 Key files:
 
 - `.eleventy.js`
-- `.github/workflows/pages.yml`
+- `.github/workflows/ci.yml`
+- `scripts/check.mjs`
 - `content/posts/posts.11tydata.js`
 - `src/data/site.js`
 
@@ -121,18 +121,11 @@ source shell config before running `node` or `npm`.
 
 ## Deployment Rules
 
-GitHub Pages is the active deployment target.
+Cloudflare Pages is the only deployment target. A push to `main` triggers the
+Cloudflare build (`npm run build`, output `_site`).
 
-Expected GitHub configuration:
-
-- Pages source set to `GitHub Actions`
-
-Workflow:
-
-- pushes to `main` trigger deployment
-
-Agents should keep the GitHub Pages workflow working unless the user explicitly
-requests a deployment change.
+`.github/workflows/ci.yml` is CI only: it builds and runs `npm run check`, and
+does not deploy. Do not re-add a GitHub Pages deploy job.
 
 ## Repo Hygiene
 

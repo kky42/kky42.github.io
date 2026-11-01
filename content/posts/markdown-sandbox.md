@@ -6,8 +6,9 @@ tags:
   - markdown
   - demo
   - eleventy
-draft: false
+draft: true
 mermaid: true
+math: true
 ---
 
 This post exists to verify the first version of the blog stack. It should render

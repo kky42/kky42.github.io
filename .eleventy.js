@@ -76,16 +76,6 @@ module.exports = function (eleventyConfig) {
       .sort((left, right) => right.date - left.date);
   });
 
-  // The home page shows recent writing, but hides the stack's own demo post.
-  eleventyConfig.addCollection("homePosts", (collectionApi) => {
-    return collectionApi
-      .getFilteredByTag("post")
-      .filter(isPublishable)
-      .filter((item) => item.page.fileSlug !== "markdown-sandbox")
-      .sort((left, right) => right.date - left.date)
-      .slice(0, 8);
-  });
-
   eleventyConfig.addCollection("sitemap", (collectionApi) => {
     return collectionApi
       .getAll()

@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="{{ "/images/og-default.png" | absoluteUrl(site.url) }}" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.jpg" />
-    <link rel="stylesheet" href="/assets/vendor/katex.min.css" />
+    {% if math %}<link rel="stylesheet" href="/assets/vendor/katex.min.css" />{% endif %}
     <link rel="stylesheet" href="/assets/vendor/highlight.css" />
     <link rel="stylesheet" href="/assets/css/site.css" />
   </head>
@@ -67,12 +67,6 @@
           </ul>
         {% endif %}
 
-        {% if site.email %}
-          <p class="sidebar-label">Contact</p>
-          <ul class="sidebar-list">
-            <li><a href="mailto:{{ site.email }}">Email me</a></li>
-          </ul>
-        {% endif %}
       </header>
 
       <main class="site-main">
@@ -84,9 +78,11 @@
       </footer>
     </div>
 
-    <script defer src="/assets/vendor/katex.min.js"></script>
-    <script defer src="/assets/vendor/katex-auto-render.min.js"></script>
-    <script defer src="/assets/js/math.js"></script>
+    {% if math %}
+      <script defer src="/assets/vendor/katex.min.js"></script>
+      <script defer src="/assets/vendor/katex-auto-render.min.js"></script>
+      <script defer src="/assets/js/math.js"></script>
+    {% endif %}
     {% if mermaid %}
       <script type="module" src="/assets/js/mermaid.js"></script>
     {% endif %}

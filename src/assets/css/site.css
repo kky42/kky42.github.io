@@ -287,13 +287,7 @@ h4 {
   margin: 0 0 0.4rem;
 }
 
-.page-copy {
-  margin: 0 0 1.4rem;
-  color: #3a3a3a;
-  font-size: 0.98rem;
-}
-
-.section-block h1.page-title + .page-copy {
+.section-block h1.page-title {
   padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--rule);
 }
